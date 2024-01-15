@@ -37,7 +37,7 @@ namespace SRanipalExtTrackingInterface
             var currentDllDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             
             // Get the directory of the sr_runtime.exe program from our start menu shortcut. This is where the SRanipal dlls are located.
-            var srInstallDir = (string) Registry.LocalMachine.OpenSubKey(@"Software\VIVE\SRWorks\SRanipal")?.GetValue("ModuleFileName");
+            var srInstallDir = Registry.LocalMachine.OpenSubKey(@"Software\VIVE\SRWorks\SRanipal")?.GetValue("ModuleFileName");
 
             // Dang you SRanipal
             var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
